@@ -11,6 +11,7 @@ data_faker = Faker('pt_BR')
 
 def request_recipes():
     return {
+        'id': data_faker.random_number(digits=2, fix_len=True),
         'title': data_faker.sentence(nb_words=6),
         'description': data_faker.sentence(nb_words=12),
         'preparation_time': data_faker.random_number(digits=2, fix_len=True),
